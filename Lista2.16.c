@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<strings.h>
+
+char codigo[1000+2];
+char mensagem[1000];
+int i, m, size;
+
+int main(void) {
+  gets(codigo);
+  size=strlen(codigo);
+  m=0;
+  for (i=0; i<size; i++) {
+    if (codigo[i]==' ')
+      mensagem[m++]=' ';
+    else {
+      i++;
+      mensagem[m++]=codigo[i];
+    }
+  }
+  printf("%s\n", mensagem);
+  return 0;
+}
